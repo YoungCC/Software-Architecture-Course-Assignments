@@ -1,0 +1,33 @@
+stakeholder goals SMARTHOMEgoals : "SmartHome stakeholder goals" for system [
+	description "This document contains the stakeholder requirements for the Smart Home System (SHS).
+SMARTHOME provides control for relatively household devices (HD). 
+SMARTHOME consists of software, hardware, and humans."
+	goal g1 : "Reliability" [
+		description "The simple controller (SC) shall provide reliable control of SMARTHOME."
+		rationale "SMARTHOME is a safety critical system that cannot tolerate unreliable behavior."
+        stakeholder SmartHome.yc
+	uncertainty[
+		volatility 2
+		impact 3	
+	]
+	]
+	goal g2 : "Scalability" [
+		description "This system should be scalable for more and more devices being embedded in SMARTHOME."
+		rationale "SMARTHOME is a reliable system with modularized design."
+        stakeholder SmartHome.yc
+        
+        ]
+    goal g3 : "Security" [
+		description "This system should be safe for providing very strict access and authentication rules."
+		rationale "SMARTHOME is a safe system with highly Security."
+        stakeholder SmartHome.jw
+        
+        ]
+    goal g4 : "Usability" [
+		description "This system should be easy to use."
+		rationale "SMARTHOME is a critical system with a user-friendly user interface."
+        stakeholder SmartHome.jw
+        
+        ]
+	]
+	

@@ -1,0 +1,8 @@
+organization SmartHome
+stakeholder yc [
+	full name "Yang Cao"
+	
+]
+stakeholder jw [
+	full name "Jinrui Wang"
+]

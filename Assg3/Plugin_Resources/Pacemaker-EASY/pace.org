@@ -1,0 +1,8 @@
+organization pace
+stakeholder jdm [
+	full name "John D. McGregor"
+	
+]
+stakeholder rss [
+	full name "Roselane Santana Sylva"
+]

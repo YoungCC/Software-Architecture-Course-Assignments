@@ -1,0 +1,83 @@
+system requirements specificationZigbeeDevices for integration::ZigbeeDevices  
+[
+val MaximumTemperature = 50.0 
+val MaximumSmokescope = 15.5
+requirement req1: "SmartHome cannot exceed the maximum setting" 
+[
+description this "Temperature sensor shall have a maximum reading that is less than or equal to maximum setting"
+rationale "The system might exceed the maximum appropriate temperature"
+mitigates "Invalid data sent by the Temperature sensor"
+
+] 
+
+requirement req2 : "SmartHome cannot exceed the maximum setting" 
+[
+description this "Smoking sensor shall have a maximum reading that is less than or equal to maximum setting"
+rationale "The system might exceed the maximum safe Smokescope"
+mitigates "Invalid data sent by the Smoking sensor"
+]
+
+requirement req3 : "SmartHome can control light on and off" 
+[
+description this "Light sensor shall enable to turn light on and off"
+rationale "The system can get access to the household appliances connecting to the Internet"
+mitigates "Invalid data sent by the light sensor"
+]
+
+]
+system requirements specificationIPDevices for integration::IPDevices  
+[
+requirement req1: "SmartHome can control MusicPlayer on and off" 
+[
+description this "MusicPlayer sensor shall read the status of MusicPlayer"
+rationale "The system can get access to the household appliances connecting to the Internet"
+mitigates "Invalid data sent by the MusicPlayer sensor"
+
+] 
+
+requirement req2 : "SmartHome can control IP camera on and off" 
+[
+description this "IP camera sensor shall read the status of IP camera"
+rationale "The system can get access to the household appliances connecting to the Internet"
+mitigates "Invalid data sent by the IP camera sensor"
+]
+
+requirement req3 : "SmartHome can control TV on and off" 
+[
+description this "TV sensor shall enable to turn TV on and off"
+rationale "The system can get access to the household appliances connecting to the Internet"
+mitigates "Invalid data sent by the TV sensor"
+]
+
+]
+system requirements specificationMainControlRouter for integration::MainControlRouter  
+[
+requirement req1: "MainControlRouter connects to the Internet and provides Internet connection function to all the devices." 
+[
+description this "MCR receives commands from Remote Server or Clients directly (Only if when clients in the local area network, this measure can guarantee the system works well when there were problem with Internet access)."
+rationale "MCR send log information to Remote Server.
+		   MCR has two connection methods with devices, one is Zigbee, and another is IP.
+           MCR provides a storage system to temporarily store data when there is no Internet."
+mitigates "MCR check the data from sensors and send alarm to Clients."
+]
+] 
+system requirements specificationRemoteServer for integration::RemoteServer  
+[
+requirement req2 : "Remote Server handle the requests from different Clients and transfer to MCR." 
+[
+description this "The main function of this module are creating connection between MCR and Clients when Clients are not in local area network, and storing related information, like logs, user information."
+rationale "The system can get access to the household appliances connecting to the Internet"
+mitigates "Invalid data sent by the devices"
+]
+]
+system requirements specificationClients for integration::Clients  
+[
+requirement req3 : "Clients provide the user interface for user to control and manage all the subsystem.
+" 
+[
+description this "The clients module can be an application in smart phone or a website."
+rationale "The system can get access to the household appliances connecting to the Internet"
+mitigates "Invalid data sent by the devices"
+]
+
+]

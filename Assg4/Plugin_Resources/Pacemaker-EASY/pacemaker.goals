@@ -1,0 +1,18 @@
+stakeholder goals PACEgoals : "Pacemaker stakeholder goals" for system [
+	description "This document contains the stakeholder requirements for the Simple Control System (SCS).
+PACE provides control for a relatively simple device (SD). 
+PACE consists of software, hardware, and humans."
+	goal g1 : "Reliability" [
+		description "The simple controller (SC) shall provide relible control of PACE."
+		rationale "PACE is a safety critical device that cannot tolerate unreliable behavior."
+		stakeholder pace.jdm
+		category Quality.Safety 
+	uncertainty[
+		volatility 2
+		impact 3	
+		
+	]
+	
+	]
+	
+	]
